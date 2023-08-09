@@ -1,0 +1,13 @@
+contract;
+
+storage {
+    counter: u64 = 0,
+}
+
+abi Counter {
+    #[storage(read, write)]
+    fn increment();
+
+    #[storage(read)]
+    fn count() -> u64;
+}
